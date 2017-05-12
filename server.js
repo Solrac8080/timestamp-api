@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!<br>Try adding a date to the end of the url like:'+"<br><a href='/May%2011,%202017'>https://test-solrac8080.c9users.io/May 11, 2017</a><br>or try unix time code like:<br><a href='/1494460800'>https://test-solrac8080.c9users.io/1494460800</a><br>or try adding anything to break it, then report it at <a href='https://github.com/Solrac8080/timestamp-api/issues/new'>github</a>.");
 });
 
-app.listen(80, function () {
+app.listen(process.env.PORT, function () {
   console.log('Example app listening on port 8080!');
 });
 
