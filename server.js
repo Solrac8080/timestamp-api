@@ -22,6 +22,7 @@ app.use("",function (req, res) {
         natural = monthNames[date.getUTCMonth()]+" "+date.getUTCDate()+", "+date.getUTCFullYear();
         if (isNaN(unix)){
             unix = null;
+            natural = null;
         }
         res.end('{"unix":'+unix+',"natural":"'+natural+'"}');
     }else{ 
